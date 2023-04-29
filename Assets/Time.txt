@@ -1,2 +1,4 @@
 31min - project setup + basic player
 1h 49m/2h 20m - basic gameplay
+35m/2h 56m - Wall movement
+21m/3h 18m - Improved Obstacles
