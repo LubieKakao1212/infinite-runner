@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <WorldSpeed>k__BackingField: 1
   <DistanceTraveled>k__BackingField: 0
+  SpeedUpAmount: 0.05
 --- !u!1 &2271584300406299064
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,9 +507,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpread: 2.5
-  SpawnIntervalMin: 0.1
-  SpawnIntervalMax: 3
+  spawnIntervals:
+    defaultBucket:
+    - -1
+    - 2
+    - 2
+    - 2
+    - 3
+    - 3
+    - 3
+    - 5
   obstaclePrefabs:
-  - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    defaultBucket:
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
+    - {fileID: 2886160048364897208, guid: 40fc7ac459baa504aad20909d67ead53, type: 3}
+    - {fileID: 2886160048364897208, guid: 40fc7ac459baa504aad20909d67ead53, type: 3}
   despawnAnchor: {fileID: 2421356349235806799}
   world: {fileID: 6907650611074031753}

@@ -10,13 +10,10 @@ public class ObstacleSpawner : MonoBehaviour
     private float spawnSpread;
 
     [SerializeField]
-    private float SpawnIntervalMin;
+    private BucketRandom<float> spawnIntervals;
 
     [SerializeField]
-    private float SpawnIntervalMax;
-
-    [SerializeField]
-    private List<Obstacle> obstaclePrefabs;
+    private BucketRandom<Obstacle> obstaclePrefabs;
 
     [SerializeField]
     private Transform despawnAnchor;
@@ -46,7 +43,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         var x = Random.Range(-spawnSpread, spawnSpread);
 
-        var prefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count)];
+        var prefab = obstaclePrefabs.GetRandom();
 
         var obstacle = Instantiate(prefab, new Vector3(x, transform.position.y), Quaternion.identity);
 
@@ -55,6 +52,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void ResetMachine()
     {
-        spawnMachine.Interval = Random.Range(SpawnIntervalMin, SpawnIntervalMax);
+        var interval = spawnIntervals.GetRandom();
+
+        while (interval <= 0)
+        {
+            Spawn();
+            interval = spawnIntervals.GetRandom();
+        }
+
+        spawnMachine.Interval = interval / world.WorldSpeed;
     }
 }
