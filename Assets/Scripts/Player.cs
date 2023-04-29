@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils.Modifiers;
 using static Util;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
     private const float stopEpsilon = 0.05f;
+
+    public ModifiableFloat SpeedFactor { get; private set; }
 
     [SerializeField]
     private Rigidbody2D rigid;
@@ -22,6 +25,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         trans = transform;
+        SpeedFactor = new ModifiableFloat(1f);
     }
 
     void FixedUpdate()
@@ -33,6 +37,6 @@ public class Player : MonoBehaviour
 
     private float CalculateSpeed(float xDelta)
     {
-        return Mathf.Clamp01(Mathf.Max((Mathf.Abs(xDelta) - stopEpsilon) / stopDistance, 0)) * speed;
+        return Mathf.Clamp01(Mathf.Max((Mathf.Abs(xDelta) - stopEpsilon) / stopDistance, 0)) * speed * SpeedFactor.GetValue();
     }
 }

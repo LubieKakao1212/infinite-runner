@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7679516563434848611}
   - component: {fileID: 730570150}
   - component: {fileID: 730570151}
+  - component: {fileID: 1291388573777219795}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -197,3 +198,18 @@ MonoBehaviour:
   acceptedTags:
   - Obstacle
   destroyOnTrigger: 1
+--- !u!114 &1291388573777219795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679516563434848610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0c0252d6e29194da930b7f49ffee02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPowerUp: {fileID: 11400000, guid: 19e3f640df7a5aa4bb1eeb05f032509d, type: 2}
+  player: {fileID: 7679516563434848611}
+  world: {fileID: 0}
