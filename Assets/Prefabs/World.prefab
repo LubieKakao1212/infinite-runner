@@ -165,12 +165,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80b80a906fff2e842b699869dcc97841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
-  m_Size: {x: 1, y: 11}
+  m_DrawMode: 2
+  m_Size: {x: 1, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -405,12 +405,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80b80a906fff2e842b699869dcc97841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
-  m_Size: {x: 1, y: 11}
+  m_DrawMode: 2
+  m_Size: {x: 1, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a85c7479f9f2b24aa172038195f2bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpread: 2.5
+  spawnSpread: 2
   spawnIntervals:
     defaultBucket:
     - -1
@@ -521,13 +521,13 @@ MonoBehaviour:
     defaultBucket:
     - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
     - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: be1c8d9021ac2fc499a96137f95086e3, type: 3}
-    - {fileID: 2886160048364897208, guid: 40fc7ac459baa504aad20909d67ead53, type: 3}
-    - {fileID: 2886160048364897208, guid: 40fc7ac459baa504aad20909d67ead53, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
+    - {fileID: 2196508932565863328, guid: b1b3c2ca06c936340b5d6de935f36b51, type: 3}
   despawnAnchor: {fileID: 2421356349235806799}
   world: {fileID: 6907650611074031753}

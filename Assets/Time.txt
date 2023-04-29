@@ -2,4 +2,5 @@
 1h 49m/2h 20m - basic gameplay
 35m/2h 56m - Wall movement
 21m/3h 18m - Improved Obstacles
-1h 42m/5h 1m - Abstract Poweup System
+1h 42m/5h 1m - Abstract Powerup System
+1h 16m/6h 27m - Perspective test
