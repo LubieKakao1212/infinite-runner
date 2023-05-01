@@ -36,7 +36,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Update()
     {
-        spawnMachine.Forward(Time.deltaTime);
+        spawnMachine.Forward(Time.deltaTime * world.WorldSpeed);
     }
 
     private void Spawn()
@@ -60,6 +60,6 @@ public class ObstacleSpawner : MonoBehaviour
             interval = spawnIntervals.GetRandom();
         }
 
-        spawnMachine.Interval = interval / world.WorldSpeed;
+        spawnMachine.Interval = interval;
     }
 }
