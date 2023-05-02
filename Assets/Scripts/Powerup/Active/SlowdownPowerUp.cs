@@ -18,7 +18,7 @@ public class SlowdownPowerUp : ActivePowerUp
     [SerializeField]
     private float SpeedDuattion;
 
-    public override void Activate(ActivePowerupHandler handler, Player player, WorldSpeedManager world)
+    public override void Activate(PowerupHandler handler, Player player, WorldSpeedManager world)
     {
         handler.SetPowerUp(null);
         player.StartCoroutine(DoSlow(world));

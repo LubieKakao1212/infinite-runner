@@ -15,7 +15,7 @@ public class RemoteTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (acceptedTags.Contains(collision.tag))
+        if (enabled && acceptedTags.Contains(collision.tag))
         {
             OnTriggered?.Invoke();
             if (destroyOnTrigger)
@@ -24,6 +24,4 @@ public class RemoteTrigger : MonoBehaviour
             }
         }
     }
-
-
 }

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Utils;
 
-public class ObstacleSpawner : MonoBehaviour
+public class MovableSpawner : MonoBehaviour
 {
     [SerializeField]
     private float spawnSpread;
@@ -13,7 +13,7 @@ public class ObstacleSpawner : MonoBehaviour
     private BucketRandom<float> spawnIntervals;
 
     [SerializeField]
-    private BucketRandom<Obstacle> obstaclePrefabs;
+    private BucketRandom<Movable> obstaclePrefabs;
 
     [SerializeField]
     private Transform despawnAnchor;

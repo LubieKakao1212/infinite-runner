@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UIElements;
 
-public class Obstacle : MonoBehaviour
+public class Movable : MonoBehaviour
 {
     private bool IsSpawned => world != null;
 

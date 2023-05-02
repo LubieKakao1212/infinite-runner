@@ -621,10 +621,6 @@ PrefabInstance:
       propertyPath: world
       value: 
       objectReference: {fileID: 478084531}
-    - target: {fileID: 1291388573777219795, guid: e93156ae394097548ab910b6f5ade193, type: 3}
-      propertyPath: currentPowerUp
-      value: 
-      objectReference: {fileID: 11400000, guid: 2a7f9c8281d6c684ba1539748c290eea, type: 2}
     - target: {fileID: 7679516563434848610, guid: e93156ae394097548ab910b6f5ade193, type: 3}
       propertyPath: m_Name
       value: Player

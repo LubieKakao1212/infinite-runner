@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivePowerupHandler : MonoBehaviour
+public class PowerupHandler : MonoBehaviour
 {
     public event Action<ActivePowerUp> CurrentPowerUpChanged;
+
+    public Shield Shield => shield;
 
     [SerializeField]
     private ActivePowerUp currentPowerUp;
@@ -15,6 +17,9 @@ public class ActivePowerupHandler : MonoBehaviour
 
     [SerializeField]
     private WorldSpeedManager world;
+
+    [SerializeField]
+    private Shield shield;
 
     public void SetPowerUp(ActivePowerUp powerUp)
     {

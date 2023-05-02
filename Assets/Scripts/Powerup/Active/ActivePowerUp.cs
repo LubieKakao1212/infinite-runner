@@ -13,5 +13,5 @@ public abstract class ActivePowerUp : ScriptableObject
     [field: SerializeField]
     public string DisplayName { get; private set; }
 
-    public abstract void Activate(ActivePowerupHandler handler, Player plyaer, WorldSpeedManager world);
+    public abstract void Activate(PowerupHandler handler, Player plyaer, WorldSpeedManager world);
 }

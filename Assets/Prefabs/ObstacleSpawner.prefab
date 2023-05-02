@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2837194499495981377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3752901311684934968}
+  m_Layer: 0
+  m_Name: DespawnAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3752901311684934968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837194499495981377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1496706660550950130}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8580947670757971245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496706660550950130}
+  - component: {fileID: 7685273052398561442}
+  m_Layer: 0
+  m_Name: ObstacleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1496706660550950130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580947670757971245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.3333335, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3752901311684934968}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7685273052398561442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580947670757971245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a85c7479f9f2b24aa172038195f2bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnSpread: 3
+  spawnIntervals:
+    defaultBucket:
+    - -1
+    - 2
+    - 2
+    - 2
+    - 3
+    - 3
+    - 3
+    - 5
+  obstaclePrefabs:
+    defaultBucket:
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+    - {fileID: 5821728933439750352, guid: abdc8450de68f174eac3d34225b770cb, type: 3}
+    - {fileID: 5821728933439750352, guid: abdc8450de68f174eac3d34225b770cb, type: 3}
+  despawnAnchor: {fileID: 3752901311684934968}
+  world: {fileID: 0}
