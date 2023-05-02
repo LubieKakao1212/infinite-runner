@@ -1,10 +1,8 @@
-using Mono.CompilerServices.SymbolWriter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using Unity.VisualScripting;
+using System.Reflection;
 using UnityEngine;
 
 
@@ -60,7 +58,7 @@ public class SystemManager : MonoBehaviour
     private static IEnumerable<GameSystem> GetSystemDependencies(GameSystem system, Dictionary<Type, GameSystem> typeToSystem)
     {
         var type = system.GetType();
-        var attr = type.GetAttribute<SystemDependenciesAttribute>();
+        var attr = type.GetCustomAttribute<SystemDependenciesAttribute>();
 
         if (attr != null)
         {

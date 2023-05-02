@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6327e9f4e5688924ca149a0d654b3db0, type: 3}
   m_Name: Slow
   m_EditorClassIdentifier: 
-  <DisplaySprite>k__BackingField: {fileID: 21300000, guid: 4d7e6e570e9d65a4c9a994783a0652e2, type: 3}
+  <DisplaySprite>k__BackingField: {fileID: 21300000, guid: ea292d445b1c4cb48897511cd9453f1c, type: 3}
   <DisplayTint>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <DisplayName>k__BackingField: Slowdown
   SlowPower: 1

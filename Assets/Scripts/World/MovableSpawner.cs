@@ -4,13 +4,10 @@ using UnityEditor;
 using UnityEngine;
 using Utils;
 
-public class MovableSpawner : MonoBehaviour
+public class MovableSpawner : Spawner
 {
     [SerializeField]
     private float spawnSpread;
-
-    [SerializeField]
-    private BucketRandom<float> spawnIntervals;
 
     [SerializeField]
     private BucketRandom<Movable> obstaclePrefabs;
@@ -18,28 +15,7 @@ public class MovableSpawner : MonoBehaviour
     [SerializeField]
     private Transform despawnAnchor;
 
-    [SerializeField]
-    private WorldSpeedManager world;
-
-    private AutoTimeMachine spawnMachine;
-    
-    void Start()
-    {
-        spawnMachine = new AutoTimeMachine(() =>
-        {
-            Spawn();
-            ResetMachine();
-        }, 0);
-
-        ResetMachine();
-    }
-
-    private void Update()
-    {
-        spawnMachine.Forward(Time.deltaTime * world.WorldSpeed);
-    }
-
-    private void Spawn()
+    protected override void Spawn()
     {
         var x = Random.Range(-spawnSpread, spawnSpread);
 
@@ -47,19 +23,6 @@ public class MovableSpawner : MonoBehaviour
 
         var obstacle = Instantiate(prefab, new Vector3(x, transform.position.y), Quaternion.identity);
 
-        obstacle.Spawn(world, despawnAnchor.position.y);
-    }
-
-    private void ResetMachine()
-    {
-        var interval = spawnIntervals.GetRandom();
-
-        while (interval <= 0)
-        {
-            Spawn();
-            interval = spawnIntervals.GetRandom();
-        }
-
-        spawnMachine.Interval = interval;
+        obstacle.Spawn(World, despawnAnchor.position.y);
     }
 }
