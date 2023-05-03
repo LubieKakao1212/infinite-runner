@@ -25,12 +25,28 @@ namespace Utils.Modifiers
         /// <returns>Modifier instance</returns>
         public Modifier<M> AddModifier(E category, M value)
         {
-            var mod = new Modifier<M>(value);
+            var mod = new Modifier<M>(() => value);
 
             AddModifier(category, mod);
 
             return mod;
         }
+
+        /// <summary>
+        /// Adds a new modifier to category <paramref name="category"/>
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="valueGetter"></param>
+        /// <returns>Modifier instance</returns>
+        public Modifier<M> AddModifier(E category, Func<M> valueGetter)
+        {
+            var mod = new Modifier<M>(valueGetter);
+
+            AddModifier(category, mod);
+
+            return mod;
+        }
+
 
         /// <summary>
         /// Adds a premade modifier to category <paramref name="category"/>
@@ -73,19 +89,24 @@ namespace Utils.Modifiers
     /// <inheritdoc cref="Modifiable{V, M, E}"/>
     public abstract class BaseValueModifiable<V, M, E> : Modifiable<V, M, E> where E : Enum
     {
-        public V BaseValue { get; protected set; }
+        public Func<V> BaseValue { get; protected set; }
 
         public BaseValueModifiable(V value)
         {
-            BaseValue = value;
+            BaseValue = () => value;
+        }
+
+        public BaseValueModifiable(Func<V> valueGetter)
+        {
+            BaseValue = valueGetter;
         }
     }
 
     public class Modifier<T>
     {
-        public T value;
+        public Func<T> value;
 
-        public Modifier(T value) 
+        public Modifier(Func<T> value) 
         { 
             this.value = value;
         }

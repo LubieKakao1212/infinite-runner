@@ -14,6 +14,12 @@ public class BlackoutEventHandler : RandomEventHandler
     private float turnOnDuration = 1f;
 
     [SerializeField]
+    private float warnDuration;
+
+    [SerializeField]
+    private float warnBrightness;
+
+    [SerializeField]
     private Light2D globalLight;
 
     private Sequence anim;
@@ -22,10 +28,13 @@ public class BlackoutEventHandler : RandomEventHandler
     {
         anim = DOTween.Sequence();
 
-        var turnOffTween = DOTween.To((v) => globalLight.intensity = v, globalLight.intensity, 0f, turnOffDuration).SetEase(Ease.InBack, 0.2f);
+        var warnTween = DOTween.To(() => globalLight.intensity, (v) => globalLight.intensity = v, warnBrightness, warnDuration).SetEase(Ease.OutBounce);
+        anim.Append(warnTween);
+
+        var turnOffTween = DOTween.To(() => globalLight.intensity, (v) => globalLight.intensity = v, 0f, turnOffDuration).SetEase(Ease.InElastic, 2f, 1f);
         anim.Append(turnOffTween);
 
-        var turnOnTween = DOTween.To((v) => globalLight.intensity = v, 0f, globalLight.intensity, turnOnDuration).SetEase(Ease.InOutSine);
+        var turnOnTween = DOTween.To(() => 0f, (v) => globalLight.intensity = v, globalLight.intensity, turnOnDuration).SetEase(Ease.InOutSine);
         anim.Append(turnOnTween);
         anim.Pause();
     }

@@ -341,6 +341,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c334f6dd725f6545893bb833577a91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1715122342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 316512043306639400, guid: e93156ae394097548ab910b6f5ade193, type: 3}
+  m_PrefabInstance: {fileID: 7679516563571452596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ab779065eaa164dac762ecefcc3b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1955805209 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1291388573777219795, guid: e93156ae394097548ab910b6f5ade193, type: 3}
@@ -407,18 +418,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5047026622399535552, guid: fb3be985076bd27438eee7e478a412ba, type: 3}
-      propertyPath: spawnIntervals.defaultBucket.Array.data[0]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6871980491333831553, guid: fb3be985076bd27438eee7e478a412ba, type: 3}
-      propertyPath: turnOnDuration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6871980491333831553, guid: fb3be985076bd27438eee7e478a412ba, type: 3}
-      propertyPath: turnOffDuration
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3be985076bd27438eee7e478a412ba, type: 3}
 --- !u!1001 &4246489341616779433
@@ -428,10 +427,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2362938362833539529, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4246489342463093143, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -524,10 +519,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4487741164553590165, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
+      propertyPath: world
+      value: 
+      objectReference: {fileID: 478084531}
+    - target: {fileID: 4487741164553590165, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 730570151}
     - target: {fileID: 4935527259270499591, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
       propertyPath: powerUpHandler
       value: 
       objectReference: {fileID: 1955805209}
+    - target: {fileID: 6791150593788821007, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 1715122342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e912039e5f38b84489052ef4969f33e, type: 3}
 --- !u!1001 &7679516563571452596

@@ -15,6 +15,12 @@ public class MovableSpawner : Spawner
     [SerializeField]
     private Transform despawnAnchor;
 
+    protected override void Start()
+    {
+        base.Start();
+        deltaTime.AddModifier(Utils.Modifiers.NumericModifierType.Mul, () => World.WorldSpeed);
+    }
+
     protected override void Spawn()
     {
         var x = Random.Range(-spawnSpread, spawnSpread);

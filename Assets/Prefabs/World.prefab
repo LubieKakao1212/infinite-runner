@@ -155,8 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cafc9399879f37439555f90d8e25aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnOffDuration: 0.1
-  turnOnDuration: 1
+  turnOffDuration: 1
+  turnOnDuration: 3
+  warnDuration: 1
+  warnBrightness: 2
   globalLight: {fileID: 619394801}
 --- !u!1 &2271584299318062347
 GameObject:
@@ -736,7 +738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnIntervals:
     defaultBucket:
-    - 5
+    - 10
+    - 13
+    - 15
   world: {fileID: 6907650611074031753}
   events:
     defaultBucket:

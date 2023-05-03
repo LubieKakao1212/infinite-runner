@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,10 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class Shield : MonoBehaviour
 {
+    public event Action<int> OnChargeChanged;
+
+    public int Charges => charges;
+
     private int charges;
 
     [SerializeField]
@@ -20,6 +25,8 @@ public class Shield : MonoBehaviour
         charges += amount;
 
         SetEnabled(true);
+
+        OnChargeChanged?.Invoke(charges);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +37,7 @@ public class Shield : MonoBehaviour
         {
             SetEnabled(false);
         }
+        OnChargeChanged?.Invoke(charges);
     }
 
     private void SetEnabled(bool enabled)

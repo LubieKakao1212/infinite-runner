@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Utils;
+using Utils.Modifiers;
 
 public abstract class Spawner : MonoBehaviour
 {
@@ -15,8 +17,10 @@ public abstract class Spawner : MonoBehaviour
     private WorldSpeedManager world;
 
     private AutoTimeMachine spawnMachine;
-    
-    void Start()
+
+    protected ModifiableFloat deltaTime { get; private set; }
+
+    protected virtual void Start()
     {
         spawnMachine = new AutoTimeMachine(() =>
         {
@@ -24,12 +28,14 @@ public abstract class Spawner : MonoBehaviour
             ResetMachine();
         }, 0);
 
+        deltaTime = new ModifiableFloat(() => Time.deltaTime);
+
         ResetMachine();
     }
 
     private void Update()
     {
-        spawnMachine.Forward(Time.deltaTime * world.WorldSpeed);
+        spawnMachine.Forward(deltaTime.GetValue());
     }
 
     protected abstract void Spawn();
