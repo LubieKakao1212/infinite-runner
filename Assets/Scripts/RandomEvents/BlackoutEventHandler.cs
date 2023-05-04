@@ -28,13 +28,15 @@ public class BlackoutEventHandler : RandomEventHandler
     {
         anim = DOTween.Sequence();
 
+        //var baseInensity = globalLight.intensity;
+
         var warnTween = DOTween.To(() => globalLight.intensity, (v) => globalLight.intensity = v, warnBrightness, warnDuration).SetEase(Ease.OutBounce);
         anim.Append(warnTween);
 
         var turnOffTween = DOTween.To(() => globalLight.intensity, (v) => globalLight.intensity = v, 0f, turnOffDuration).SetEase(Ease.InElastic, 2f, 1f);
         anim.Append(turnOffTween);
 
-        var turnOnTween = DOTween.To(() => 0f, (v) => globalLight.intensity = v, globalLight.intensity, turnOnDuration).SetEase(Ease.InOutSine);
+        var turnOnTween = DOTween.To(() => globalLight.intensity, (v) => globalLight.intensity = v, globalLight.intensity, turnOnDuration).SetEase(Ease.InOutSine);
         anim.Append(turnOnTween);
         anim.Pause();
     }

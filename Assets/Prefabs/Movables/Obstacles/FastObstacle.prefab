@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FastObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 5533047351902245251, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5533047351902245261, guid: 2da59c7e23965fa4ab2b6b190a058e06, type: 3}
       propertyPath: movementSpeed
       value: 2
